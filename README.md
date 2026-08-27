@@ -33,7 +33,9 @@ GitHub Pages:
    manual-trigger; add a `push: branches: [main]` trigger in
    `.github/workflows/deploy.yml` if you want it on every push).
 
-Any other static host works the same way: `npm run build`, publish `out/`.
+Vercel is even simpler: import the forked repo and deploy — it detects Next.js and
+needs no configuration. Any other static host works too: `npm run build`, publish
+`out/`.
 
 ## Stack
 
