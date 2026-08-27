@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Manual-trigger only: this repo is the source of the report, not its host.
+# In a fork, enable Actions, set Settings → Pages → Source: GitHub Actions,
+# then run this workflow — or add a `push: branches: [main]` trigger.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

@@ -4,8 +4,6 @@ Interactive summary report for the **COT AI Product Specialist Agent** (MVP, PRD
 architecture, engineering guardrails, the learning loop, and the PRD mapping — told as a
 scroll story around one real ticket.
 
-**Live site:** https://ryvn-dev.github.io/cot-pm-agent-report/
-
 ## Run locally
 
 ```bash
@@ -24,11 +22,18 @@ server (`python3 -m http.server`, `npx serve`, GitHub Pages, …). Opening `inde
 directly via `file://` will not work: browsers block ES-module scripts from a null
 origin, so the page renders but never hydrates.
 
-## Deploy
+## Deploy your fork
 
-Pushing to `main` triggers the GitHub Actions workflow in
-`.github/workflows/deploy.yml`, which builds the export and publishes it to GitHub
-Pages. In a fork, enable it once under **Settings → Pages → Source: GitHub Actions**.
+This repo hosts the source only — it does not deploy itself. To publish your fork on
+GitHub Pages:
+
+1. Fork, then enable workflows under the **Actions** tab.
+2. **Settings → Pages → Source: GitHub Actions.**
+3. Run the **Deploy to GitHub Pages** workflow from the Actions tab (it is
+   manual-trigger; add a `push: branches: [main]` trigger in
+   `.github/workflows/deploy.yml` if you want it on every push).
+
+Any other static host works the same way: `npm run build`, publish `out/`.
 
 ## Stack
 
